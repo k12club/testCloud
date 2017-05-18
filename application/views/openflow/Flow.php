@@ -48,6 +48,7 @@
                                         <th class="sorting" tabindex="0"  rowspan="1" colspan="1" style="width:  5%">ราคา</th>
                                         <th class="sorting" tabindex="0"  rowspan="1" colspan="1" style="width:  5%">จำนวน</th>
                                         <th class="sorting" tabindex="0"  rowspan="1" colspan="1" style="width:  5%">ราคาสุทธิ</th>
+                                        <th class="sorting" tabindex="0"  rowspan="1" colspan="1" style="width:  5%">ที่อยู่</th>
                                         
                                     </tr>
                                 </thead>
@@ -68,6 +69,15 @@
                                             <td><?php echo $data->price;   ?></td>                                            
                                             <td><?php echo $data->count;   ?></td>
                                             <td><?php echo $data->price*$data->count;?></td>
+                                            <td>
+                                            
+                                            <a href="<?php echo base_url('customer/read/'.$data->id_customer); ?>"
+                                            class="btn btn-primary"
+                                            >
+                                             รายละเอียด   
+                                            </a>
+                                            </td>
+
 
                                     <?php } } ?>
                                 </tbody>

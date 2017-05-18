@@ -44,13 +44,12 @@
                                         <th class="sorting" tabindex="0"  rowspan="1" colspan="1" style="width: 5%;">#</th>
                                         <!--<th class="sorting" tabindex="0"  rowspan="1" colspan="1" style="width: 10%;">ชื่อผู้ใช้</th>-->
                                         <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width: 20%">ชื่อจริง-นามสกุล</th>
-                                        <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width:  60px;">email</th>
-                                        <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width:  60px;">phone</th>
-                                        <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width:  60px;">Facebook</th>
-                                        <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width:  60px;">Line</th>
-                                        <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width:  60px;">Instargram</th>
+                                        <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width:  5%;">email</th>
+                                        <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width:  5%;">phone</th>
+                                        <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width:  5%;">social</th> 
+                                        <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width:  10%;">Address</th>
                                        <!-- <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width:  60px;">ประเภทผู้ใช้</th>  -->
-                                        <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width:  60px;">&nbsp;</th>
+                                        <th class="sorting" tabindex="0" rowspan="1" colspan="1" style="width:  5%;">&nbsp;</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -64,9 +63,22 @@
                                             <td><a href="<?php echo base_url('customer/edit/'.$data->id); ?>"><?php echo  $data->firstname . ' ' . $data->lastname; ?></a></td>
                                             <td><?php echo  $data->email; ?></td>
                                             <td><?php echo  $data->phone; ?></td>                                            
-                                            <td><?php echo  $data->Facebook; ?></td>
-                                            <td><?php echo  $data->line; ?></td>
-                                            <td><?php echo  $data->instargram; ?></td>
+                                            <td>
+                                                <select name="social" id="social" class="form-control" required="required">
+                                                    <option value="<?php echo  $data->Facebook; ?>">Facebook :<?php echo  $data->Facebook; ?></option>
+                                                    <option value="<?php echo  $data->line; ?>">ID Line :<?php echo  $data->line; ?></option>
+                                                    <option value="<?php echo  $data->instargram; ?>">IG :<?php echo  $data->instargram; ?></option>
+                                                </select>
+                                            </td>
+                                            
+                                            <td>
+                                            <a href="<?php echo base_url('customer/read/'.$data->id); ?>"
+                                            class="btn btn-primary"
+                                            >
+                                             รายละเอียด   
+                                            </a>
+                                                
+                                            </td>
                                            <!--  <td><?php echo  $data->user_type; ?></td>  -->
                                            <td>
                                             	<a class="btn btn-danger btn-xs deleteLine" href="<?php echo  base_url('customer/remove/'.$data->id); ?>" role="button"><i class="fa fa-fw fa-trash"></i> ลบข้อมูล</a>

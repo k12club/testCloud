@@ -188,7 +188,6 @@ input::-webkit-input-placeholder {
 							<button type="submit" class="btn btn-primary btn-lg btn-block login-button">Register</button>
 						</div>
 						<div class="login-register">
-				            <a href="http://stocker2.esy.es/user/login">Login</a>
 				         </div>
 					</form>
 				</div>
